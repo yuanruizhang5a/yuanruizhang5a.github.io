@@ -22,7 +22,9 @@
 
     <!-- Want to add Bootstrap? -->
     <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
-    
+
+    <!-- CountAPI settings -->
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
   </head>
   
   <body>
@@ -34,6 +36,27 @@
       <h2>
         Yuanrui Zhang's Home Page
       </h2>
+
+      <div class="stats-container">
+       <p>This page has been viewed <span id="view-counter">...</span> times</p>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const counter = new Counter({ workspace: 'Yuanrui Zhang's Workspace' });
+          const counterElement = document.getElementById('view-counter');
+          
+          // Increment the view count and update the display
+          counter.up('page-views')
+            .then(result => {
+              counterElement.textContent = result.value;
+            })
+            .catch(error => {
+              console.error('Error tracking page view:', error);
+              counterElement.textContent = 'Error loading count';
+            });
+        });
+      </script>
 
       <p>
         <!-- To follow the path: look to the master, follow the master, walk with the master, see through the master, become the master. -->
