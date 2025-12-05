@@ -24,7 +24,7 @@
     <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
 
     <!-- CountAPI settings -->
-    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script> -->
   </head>
   
   <body>
@@ -43,8 +43,9 @@
 
       
       <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const counter = new Counter({ workspace: "yuanrui-zhangs-team-1980" });
+        // document.addEventListener('DOMContentLoaded', function() 
+        import { Counter } from 'https://cdn.jsdelivr.net/npm/counterapi/dist/counter.esm.min.js';
+          const counter = new Counter({ workspace: 'yuanrui-zhangs-team-1980' });
           const counterElement = document.getElementById('view-counter');
     
           // Increment the view count and update the display
@@ -61,7 +62,8 @@
               console.error('Error tracking page view:', error);
               counterElement.textContent = 'Error loading count';
             });
-        });
+                                                                       
+        // });
       </script>
       
       <!--
