@@ -51,7 +51,7 @@
           counter.up('first-counter-1980')
             .then(res => {
               if (counterElement){
-                  counterElement.textContent = 1;
+                  counterElement.textContent = res.value.toString();
               } else {
                   console.error('Element with ID "myId" not found.');
                   counterElement.textContent = 'Element with ID "myId" not found.';
