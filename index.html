@@ -54,6 +54,7 @@
                   counterElement.textContent = counter.value;
               } else {
                   console.error('Element with ID "myId" not found.');
+                  counterElement.textContent = 'Element with ID "myId" not found.';
               }
             })
             .catch(error => {
