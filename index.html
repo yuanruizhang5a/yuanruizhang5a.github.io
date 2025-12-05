@@ -41,7 +41,7 @@
        <p>This page has been viewed <span id="view-counter"></span> times</p>
       </div>
 
-      <!--
+      
       <script>
         document.addEventListener('DOMContentLoaded', function() {
           const counter = new Counter({ workspace: "yuanrui-zhangs-team-1980" });
@@ -49,9 +49,9 @@
     
           // Increment the view count and update the display
           counter.up('first-counter-1980')
-            .then(result => {
+            .then(counter => {
               if (counterElement){
-                  counterElement.textContent = result.value;
+                  counterElement.textContent = counter.value;
               } else {
                   console.error('Element with ID "myId" not found.');
               }
@@ -62,7 +62,8 @@
             });
         });
       </script>
-      -->
+      
+      <!--
       <script>
       import { Counter } from 'counterapi';
 
@@ -82,6 +83,7 @@
         console.error('Error incrementing counter:', error.message);
       }
       </script>
+      -->
 
 
       <p>
