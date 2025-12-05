@@ -73,10 +73,11 @@
         timeout: 5000,              // Optional: Request timeout in ms (default: 10000)
         accessToken: 'ut_foyJiPoSV938cnSJdHn4iMInOu08f7rPCcGHOQ5X'   // Optional: Authentication token for API requests (V2 API only)
       });
-        
+      const counterElement = document.getElementById('view-counter');
         try {
-        const counter = await counter.up('first-counter-1980');
-        console.log(`New count after increment: ${counter.value}`);
+        const count = await counter.up('first-counter-1980');
+        console.log(`New count after increment: ${count.value}`);
+        counterElement.textContent = count.value;
       } catch (error) {
         console.error('Error incrementing counter:', error.message);
       }
