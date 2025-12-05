@@ -45,6 +45,11 @@
         document.addEventListener('DOMContentLoaded', function() {
           const counter = new Counter({ workspace: "yuanrui-zhangs-team-1980" });
           const counterElement = document.getElementById('view-counter');
+          if (counterElement) {
+              myElement.textContent = 'New text content';
+          } else {
+              console.error('Element with ID "myId" not found.');
+          }
           
           // Increment the view count and update the display
           counter.up('first-counter-1980')
