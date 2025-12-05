@@ -49,9 +49,9 @@
     
           // Increment the view count and update the display
           counter.up('first-counter-1980')
-            .then(counter => {
+            .then(res => {
               if (counterElement){
-                  counterElement.textContent = counter.value;
+                  counterElement.textContent = res.value;
               } else {
                   console.error('Element with ID "myId" not found.');
                   counterElement.textContent = 'Element with ID "myId" not found.';
