@@ -41,6 +41,7 @@
        <p>This page has been viewed <span id="view-counter"></span> times</p>
       </div>
 
+      <!--
       <script>
         document.addEventListener('DOMContentLoaded', function() {
           const counter = new Counter({ workspace: "yuanrui-zhangs-team-1980" });
@@ -61,6 +62,26 @@
             });
         });
       </script>
+      -->
+      <script>
+      import { Counter } from 'counterapi';
+
+      // Create a client for the V2 API
+      const counter = new Counter({
+        workspace: 'yuanrui-zhangs-team-1980',  // Your workspace name
+        debug: false,               // Optional: Enable debug logging
+        timeout: 5000,              // Optional: Request timeout in ms (default: 10000)
+        accessToken: 'ut_foyJiPoSV938cnSJdHn4iMInOu08f7rPCcGHOQ5X'   // Optional: Authentication token for API requests (V2 API only)
+      });
+        
+        try {
+        const counter = await counter.up('first-counter-1980');
+        console.log(`New count after increment: ${counter.value}`);
+      } catch (error) {
+        console.error('Error incrementing counter:', error.message);
+      }
+      </script>
+
 
       <p>
         <!-- To follow the path: look to the master, follow the master, walk with the master, see through the master, become the master. -->
