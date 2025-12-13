@@ -43,25 +43,7 @@
       </div>
       -->
       
-      <script type="module">
-        // document.addEventListener('DOMContentLoaded', function() 
-        import { Counter } from 'https://cdn.jsdelivr.net/npm/counterapi/dist/counter.esm.min.js';
-          const counter = new Counter({ workspace: 'yuanrui-zhangs-team-1980' });
-          const counterElement = document.getElementById('view-count');
-    
-          // Increment the view count and update the display
-          counter.up('first-counter-1980')
-            .then(result => {
-              counterElement.textContent = result.value;
-            })
-            .catch(error => {
-              console.error('Error tracking page view:', error);
-              counterElement.textContent = 'Error loading count';
-            });                                                         
-        // });
-      </script>
 
-      <div>Views: <span id="view-count">...</span></div>
       
       <!--
       <script>
@@ -226,8 +208,29 @@ and Verification''. </li>
             <h3> My Favorite Quote </h3>
             <p> "You can't know everything, but you should convince yourself that you can know anything." --- John D. Carmack II </p>
             -->
-            
-          </div>
+
+        <script type="module">
+        // document.addEventListener('DOMContentLoaded', function() 
+        import { Counter } from 'https://cdn.jsdelivr.net/npm/counterapi/dist/counter.esm.min.js';
+          const counter = new Counter({ workspace: 'yuanrui-zhangs-team-1980' });
+          const counterElement = document.getElementById('view-count');
+    
+          // Increment the view count and update the display
+          counter.up('first-counter-1980')
+            .then(result => {
+              counterElement.textContent = result.value;
+            })
+            .catch(error => {
+              console.error('Error tracking page view:', error);
+              counterElement.textContent = 'Error loading count';
+            });                                                         
+        // });
+      </script>
+
+      <footer>      
+      <div>Views: <span id="view-count">...</span></div>
+      </footer>
+          </div> <!-- End of Main -->
 
           <!-- ******************************************************************************************************* -->
           <!-- ******************************************************************************************************* -->
@@ -484,7 +487,7 @@ Consistency Language STeC </u>. In Proc.: TASE 2014, pp. 201-208, 2014. (CCF C)
             <p align="right"> --- John D. Carmack II </p>
           </footer>
           </div>
-          
+
           
         </div>
       </div>
