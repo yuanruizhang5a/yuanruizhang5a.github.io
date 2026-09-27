@@ -115,6 +115,9 @@ footer {
   padding:25px;
   color:#FFFFFF; 
 }
+iframe {
+  max-width:100%;
+}
 
 /* Menu Links */
 ul.main-menu {
